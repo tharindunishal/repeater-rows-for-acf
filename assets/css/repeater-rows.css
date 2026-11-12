@@ -1,0 +1,392 @@
+/**
+ * Repeater Rows edit screen styles.
+ *
+ * Borders and tints are translucent grey so they work on light and dark admin
+ * themes. Spacing uses logical properties so right-to-left layouts need no overrides.
+ */
+
+.rrfa-repeater {
+	--rrfa-border: rgba(128, 128, 128, 0.4);
+	--rrfa-tint: rgba(128, 128, 128, 0.09);
+	--rrfa-tint-strong: rgba(128, 128, 128, 0.2);
+	--rrfa-accent: var(--wp-admin-theme-color, #2271b1);
+	--rrfa-danger: #d63638;
+}
+
+/*
+ * Only the table layout is a size container. In some browsers a container also traps
+ * position: fixed children, which would stop a card's editor from going full screen.
+ */
+.rrfa-repeater.-table {
+	container-type: inline-size;
+}
+
+/* Toolbar */
+
+.rrfa-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4px 16px;
+	margin-block-end: 8px;
+	font-size: 12px;
+}
+
+.rrfa-bulk {
+	display: inline-flex;
+	gap: 12px;
+}
+
+.rrfa-bulk button {
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--rrfa-accent);
+	font: inherit;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.rrfa-repeater.-empty > .rrfa-toolbar > .rrfa-bulk,
+.rrfa-repeater.-empty > .rrfa-table {
+	display: none;
+}
+
+/* Warning */
+
+.rrfa-limit-warning {
+	margin: 0 0 8px;
+	padding: 8px 12px;
+	border-inline-start: 4px solid var(--rrfa-danger);
+	background: var(--rrfa-tint);
+}
+
+.rrfa-limit-warning[hidden] {
+	display: none;
+}
+
+/* Empty state */
+
+.rrfa-empty {
+	display: none;
+	margin: 0 0 8px;
+	padding: 24px 16px;
+	border: 1px dashed var(--rrfa-border);
+	border-radius: 4px;
+	text-align: center;
+}
+
+.rrfa-repeater.-empty > .rrfa-empty {
+	display: block;
+}
+
+.rrfa-setup-hint {
+	margin: 0;
+	padding: 12px;
+	border-inline-start: 4px solid var(--rrfa-accent);
+	background: var(--rrfa-tint);
+}
+
+/* Cards */
+
+.rrfa-repeater.-block > .rrfa-rows > .rrfa-row {
+	margin-block-end: 8px;
+	border: 1px solid var(--rrfa-border);
+	border-radius: 4px;
+}
+
+.rrfa-row__header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 4px;
+	min-height: 40px;
+	padding-inline: 4px;
+	border-radius: 3px;
+	background: var(--rrfa-tint);
+}
+
+.rrfa-row:not(.-collapsed) > .rrfa-row__header {
+	border-end-start-radius: 0;
+	border-end-end-radius: 0;
+	border-block-end: 1px solid var(--rrfa-border);
+}
+
+.rrfa-row.-collapsed > .rrfa-row__body {
+	display: none;
+}
+
+.rrfa-row:has(> .rrfa-row__body .acf-field.acf-error) {
+	border-color: var(--rrfa-danger) !important;
+}
+
+/*
+ * The toggle fills the header's free space, so the whole title area is clickable. Its
+ * fixed basis moves the controls to a second line in narrow spaces, whatever the title length.
+ */
+.rrfa-row__toggle {
+	display: flex;
+	flex: 1 1 180px;
+	align-items: center;
+	gap: 8px;
+	min-width: 0;
+	min-height: 32px;
+	padding: 0 4px;
+	border: 0;
+	border-radius: 3px;
+	background: none;
+	color: inherit;
+	font: inherit;
+	text-align: start;
+	cursor: pointer;
+}
+
+.rrfa-row__index {
+	flex: none;
+	min-width: 20px;
+	padding: 1px 5px;
+	border-radius: 10px;
+	background: var(--rrfa-tint-strong);
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 18px;
+	text-align: center;
+}
+
+.rrfa-row__title {
+	overflow: hidden;
+	font-weight: 500;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.rrfa-row__handle {
+	flex: none;
+	width: 24px;
+	height: 24px;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+	cursor: grab;
+	opacity: 0.6;
+	touch-action: none;
+}
+
+.rrfa-row__handle:hover {
+	opacity: 1;
+}
+
+.ui-sortable-helper .rrfa-row__handle {
+	cursor: grabbing;
+}
+
+.rrfa-row__actions {
+	display: inline-flex;
+	flex: none;
+	gap: 2px;
+}
+
+.rrfa-icon-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	width: 28px;
+	height: 28px;
+	padding: 0;
+	border: 0;
+	border-radius: 3px;
+	background: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+.rrfa-icon-button .dashicons {
+	width: 18px;
+	height: 18px;
+	font-size: 18px;
+}
+
+.rrfa-icon-button:hover:not(:disabled) {
+	background: var(--rrfa-tint-strong);
+}
+
+.rrfa-icon-button[data-rrfa-action="remove"]:hover:not(:disabled) {
+	color: var(--rrfa-danger);
+}
+
+.rrfa-icon-button:disabled {
+	cursor: not-allowed;
+	opacity: 0.3;
+}
+
+.rrfa-row__chevron .dashicons {
+	transition: transform 0.15s ease;
+}
+
+.rrfa-row.-collapsed > .rrfa-row__header > .rrfa-row__chevron .dashicons {
+	transform: rotate(-90deg);
+}
+
+[dir="rtl"] .rrfa-row.-collapsed > .rrfa-row__header > .rrfa-row__chevron .dashicons {
+	transform: rotate(90deg);
+}
+
+.rrfa-repeater button:focus-visible {
+	outline: 2px solid var(--rrfa-accent);
+	outline-offset: 1px;
+	box-shadow: none;
+}
+
+/* Sorting */
+
+.rrfa-row-placeholder {
+	visibility: visible !important;
+	margin-block-end: 8px;
+	border: 1px dashed var(--rrfa-accent);
+	border-radius: 4px;
+	background: var(--rrfa-tint);
+}
+
+.rrfa-row.ui-sortable-helper {
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+	background: #fff;
+	color: #1d2327;
+}
+
+/* Footer */
+
+.rrfa-footer {
+	display: flex;
+	justify-content: flex-end;
+	margin-block-start: 8px;
+}
+
+/* Self-contained, because WordPress only styles its .button classes inside the admin. */
+.rrfa-add {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	min-height: 32px;
+	padding: 4px 12px;
+	border: 1px solid var(--rrfa-accent);
+	border-radius: 3px;
+	background: var(--rrfa-accent);
+	color: #fff;
+	font-size: 13px;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+.rrfa-add:hover:not(:disabled) {
+	border-color: var(--wp-admin-theme-color-darker-10, #135e96);
+	background: var(--wp-admin-theme-color-darker-10, #135e96);
+	color: #fff;
+}
+
+.rrfa-add:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.rrfa-add .dashicons {
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.rrfa-add .dashicons::before {
+	display: block;
+	line-height: 16px;
+}
+
+/* Table */
+
+.rrfa-table {
+	width: 100%;
+	background: transparent;
+}
+
+/* ACF paints table cells white, which hides inherited light text on dark admin themes. */
+.rrfa-table > thead > tr > th,
+.rrfa-table > tbody > .rrfa-row > td {
+	background: transparent;
+	color: inherit;
+}
+
+.rrfa-table > tbody > .rrfa-row > td {
+	vertical-align: top;
+}
+
+/* Front-end themes may not define this class. */
+.rrfa-table .screen-reader-text {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.rrfa-table .rrfa-cell--handle {
+	width: 32px;
+	text-align: center;
+}
+
+.rrfa-table td.rrfa-cell--handle .rrfa-row__handle {
+	display: block;
+	margin-inline: auto;
+}
+
+.rrfa-table .rrfa-cell--actions {
+	width: 124px;
+}
+
+/* Below this width a table row has no room for its columns, so its cells stack. */
+@container (max-width: 640px) {
+
+	.rrfa-table > thead {
+		display: none;
+	}
+
+	.rrfa-table,
+	.rrfa-table > tbody,
+	.rrfa-table > tbody > .rrfa-row,
+	.rrfa-table > tbody > .rrfa-row > td {
+		display: block;
+		width: auto !important;
+	}
+
+	.rrfa-table > tbody > .rrfa-row {
+		border-block-end: 1px solid var(--rrfa-border);
+	}
+
+	.rrfa-table > tbody > .rrfa-row > td[data-rrfa-label]::before {
+		content: attr(data-rrfa-label);
+		display: block;
+		margin-block-end: 4px;
+		font-weight: 500;
+	}
+
+	.rrfa-table > tbody > .rrfa-row > .rrfa-cell--handle {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		background: var(--rrfa-tint);
+	}
+
+	.rrfa-table td.rrfa-cell--handle .rrfa-row__handle {
+		margin-inline: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.rrfa-row__chevron .dashicons {
+		transition: none;
+	}
+}

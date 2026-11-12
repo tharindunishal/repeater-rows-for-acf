@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Stacked collapsible rows">
+	<rect width="640" height="360" fill="#f6f7f7"/>
+	<g fill="#fff" stroke="#c3c4c7">
+		<rect x="60" y="40" width="520" height="150" rx="6"/>
+		<rect x="60" y="202" width="520" height="48" rx="6"/>
+		<rect x="60" y="262" width="520" height="48" rx="6"/>
+	</g>
+	<path d="M60 88V46a6 6 0 0 1 6-6h508a6 6 0 0 1 6 6v42z" fill="#f0f0f1" stroke="#c3c4c7"/>
+	<g fill="#2271b1">
+		<circle cx="92" cy="64" r="11"/>
+		<circle cx="92" cy="226" r="11"/>
+		<circle cx="92" cy="286" r="11"/>
+	</g>
+	<g fill="#8c8f94">
+		<rect x="116" y="58" width="180" height="12" rx="3"/>
+		<rect x="116" y="220" width="220" height="12" rx="3"/>
+		<rect x="116" y="280" width="150" height="12" rx="3"/>
+		<rect x="84" y="104" width="90" height="9" rx="2"/>
+		<rect x="84" y="148" width="60" height="9" rx="2"/>
+	</g>
+	<g fill="#fff" stroke="#8c8f94">
+		<rect x="84" y="118" width="472" height="20" rx="3"/>
+		<rect x="84" y="162" width="472" height="18" rx="3"/>
+	</g>
+	<g fill="none" stroke="#50575e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+		<path d="m542 60 8 8 8-8"/>
+		<path d="m546 218 8 8-8 8"/>
+		<path d="m546 278 8 8-8 8"/>
+	</g>
+</svg>

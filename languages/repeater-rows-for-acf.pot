@@ -1,0 +1,244 @@
+# Copyright (C) 2026 tharindunishal
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Repeater Rows for ACF 0.1.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-09 12:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Domain: repeater-rows-for-acf\n"
+
+#. translators: %d: maximum number of rows.
+#: assets/js/repeater-rows.js:463
+#, php-format
+msgid "This field allows %d row at most."
+msgid_plural "This field allows %d rows at most."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: minimum number of rows.
+#: assets/js/repeater-rows.js:468
+#, php-format
+msgid "This field needs at least %d row."
+msgid_plural "This field needs at least %d rows."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of rows in use, 2: maximum number of rows.
+#: assets/js/repeater-rows.js:529
+#, php-format
+msgid "%1$d of %2$d row"
+msgid_plural "%1$d of %2$d rows"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of rows.
+#: assets/js/repeater-rows.js:537
+#, php-format
+msgid "%d row"
+msgid_plural "%d rows"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of inputs in the form, 2: number of inputs the server accepts.
+#: assets/js/repeater-rows.js:518
+#, php-format
+msgid "This form has about %1$d inputs, and the server accepts %2$d. Past that limit, changes to this field will not be saved. Remove some rows, or ask your host to raise the PHP setting max_input_vars."
+msgstr ""
+
+#. translators: %d: row number.
+#: assets/js/repeater-rows.js:561
+#, php-format
+msgid "Move row %d up"
+msgstr ""
+
+#. translators: %d: row number.
+#: assets/js/repeater-rows.js:567
+#, php-format
+msgid "Move row %d down"
+msgstr ""
+
+#. translators: %d: row number.
+#: assets/js/repeater-rows.js:573
+#, php-format
+msgid "Duplicate row %d"
+msgstr ""
+
+#. translators: %d: row number.
+#: assets/js/repeater-rows.js:580
+#, php-format
+msgid "Delete row %d"
+msgstr ""
+
+#. translators: %d: row number.
+#: assets/js/repeater-rows.js:605
+#: includes/class-rrfa-row-renderer.php:340
+#, php-format
+msgid "Row %d"
+msgstr ""
+
+#. translators: %d: minimum number of rows.
+#: includes/class-rrfa-field-repeater.php:443
+#, php-format
+msgid "Add at least %d row."
+msgid_plural "Add at least %d rows."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: maximum number of rows.
+#: includes/class-rrfa-field-repeater.php:451
+#, php-format
+msgid "Use no more than %d row."
+msgid_plural "Use no more than %d rows."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-rrfa-field-repeater.php:24
+msgid "Repeater Rows"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:26
+msgid "A set of sub-fields that can be repeated as many rows as needed, shown as collapsible cards or a compact table."
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:37
+#: includes/class-rrfa-field-repeater.php:194
+#: includes/class-rrfa-row-renderer.php:95
+msgid "Add Row"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:74
+msgid "Sub Fields"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:102
+msgid "Minimum Rows"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:103
+msgid "Leave at 0 for no minimum."
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:114
+msgid "Maximum Rows"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:115
+msgid "Leave at 0 for no maximum."
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:134
+msgid "Layout"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:135
+msgid "Cards suit most fields. Use Table only for short fields; large ones such as WYSIWYG or image have little room in a table."
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:140
+msgid "Cards"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:141
+msgid "Table"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:156
+msgid "Row Title Field"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:157
+msgid "The sub-field shown in each card header. By default the first text-like sub-field is used."
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:161
+msgid "Automatic"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:175
+msgid "Start Collapsed"
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:176
+msgid "Show saved rows as titles until they are opened. New rows always start open."
+msgstr ""
+
+#: includes/class-rrfa-field-repeater.php:191
+msgid "Add Row Button Label"
+msgstr ""
+
+#. translators: %s: field label.
+#: includes/class-rrfa-field-repeater.php:437
+#, php-format
+msgid "%s needs at least one row."
+msgstr ""
+
+#. translators: %s: field name.
+#: includes/class-rrfa-field-repeater.php:479
+#, php-format
+msgid "The %s field is read-only in the REST API."
+msgstr ""
+
+#. translators: %s: minimum Advanced Custom Fields version.
+#: includes/class-rrfa-plugin.php:82
+#, php-format
+msgid "Repeater Rows for ACF needs Advanced Custom Fields %s or newer to be active."
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:37
+msgid "Add sub-fields to this repeater in its field group to start using it."
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:91
+msgid "No rows yet. Use the button below to add the first one."
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:164
+msgid "Expand all"
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:165
+msgid "Collapse all"
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:228
+msgid "Row"
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:255
+msgid "Actions"
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:353
+msgid "Drag to reorder"
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:364
+msgid "Move row up"
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:365
+msgid "Move row down"
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:366
+msgid "Duplicate row"
+msgstr ""
+
+#: includes/class-rrfa-row-renderer.php:367
+msgid "Delete row"
+msgstr ""
+
+#. Plugin Name of the plugin
+#: repeater-rows-for-acf.php
+msgid "Repeater Rows for ACF"
+msgstr ""
+
+#. Description of the plugin
+#: repeater-rows-for-acf.php
+msgid "Adds a free Repeater Rows field type to Advanced Custom Fields, with a collapsible card layout on the edit screen."
+msgstr ""

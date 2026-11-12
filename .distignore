@@ -1,0 +1,17 @@
+/.git
+/.github
+/.gitignore
+/.gitattributes
+/.distignore
+/AGENTS.md
+/CLAUDE.md
+/*.local.md
+/README.md
+/build
+/composer.json
+/composer.lock
+/phpcs.xml.dist
+/tests
+/vendor
+.DS_Store
+*.log
